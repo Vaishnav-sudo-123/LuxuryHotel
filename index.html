@@ -1,0 +1,546 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Grand Palace | Luxury Hotel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+    <div class="logo">THE GRAND PALACE</div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <div class="nav-links" id="navLinks">
+        <a href="#home">HOME</a>
+        <a href="#rooms">ROOMS</a>
+        <a href="#dining">DINING</a>
+        <a href="#spa">SPA</a>
+        <a href="#contact">CONTACT</a>
+
+        <button class="theme-btn" onclick="toggleTheme()" id="themeButton">
+    ☀️
+</button>
+
+<button class="book-btn" onclick="goToBooking()">
+    BOOK NOW
+</button>
+    </div>
+</nav>
+    </header>
+
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="welcome">
+                WELCOME TO
+            </p>
+
+            <h1>
+                THE GRAND PALACE
+            </h1>
+
+            <p>
+                Experience timeless luxury, exceptional hospitality
+                and unforgettable moments.
+            </p>
+
+            <button class="hero-btn" onclick="goToRooms()">
+                        DISCOVER MORE
+                                     </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOOKING -->
+    <section class="booking">
+
+        <div class="booking-box">
+
+            <p class="small-title">RESERVE YOUR STAY</p>
+
+            <h2>Book Your Stay</h2>
+
+            <form id="bookingForm">
+
+                <div class="form-group">
+    <label>Room</label>
+
+    <select id="roomType" required>
+        <option value="">Select Room</option>
+        <option value="Deluxe Room">Deluxe Room</option>
+        <option value="Luxury Suite">Luxury Suite</option>
+        <option value="Royal Suite">Royal Suite</option>
+    </select>
+</div>
+                    <div class="form-group">
+                        <label>Check In</label>
+                        <input type="date" id="checkin" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Check Out</label>
+                        <input type="date" id="checkout" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Guests</label>
+
+                        <select id="guests" required>
+                            <option value="">Select</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <button type="submit" class="booking-btn">
+                    CHECK AVAILABILITY
+                </button>
+
+            </form>
+
+            <div id="bookingMessage"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRO -->
+    <section class="intro">
+
+        <p class="small-title">
+            A WORLD OF LUXURY
+        </p>
+
+        <h2>
+            Where Every Stay Becomes A Memory
+        </h2>
+
+        <p>
+            Discover elegant rooms, world-class dining and
+            exceptional hospitality at The Grand Palace.
+        </p>
+
+    </section>
+
+
+    <!-- ROOMS -->
+    <section id="rooms" class="rooms">
+
+        <p class="small-title">
+            STAY WITH US
+        </p>
+
+        <h2>
+            Rooms & Suites
+        </h2>
+
+
+        <div class="room-container">
+
+
+            <!-- DELUXE ROOM -->
+            <div class="room-card">
+
+                <div class="room-image room1"></div>
+
+                <div class="room-info">
+
+                    <h3>
+                        Deluxe Room
+                    </h3>
+
+                    <p>
+                        Elegant interiors with modern luxury.
+                    </p>
+
+                    <span>
+                        From ₹12,000 / Night
+                    </span>
+
+                    <br>
+
+                    <button
+                        class="view-room"
+                        onclick="showRoom(
+                            'Deluxe Room',
+                            '₹12,000 / Night',
+                            'Elegant room with a comfortable king-size bed, premium interiors and modern amenities.'
+                        )">
+
+                        VIEW DETAILS
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- LUXURY SUITE -->
+            <div class="room-card">
+
+                <div class="room-image room2"></div>
+
+                <div class="room-info">
+
+                    <h3>
+                        Luxury Suite
+                    </h3>
+
+                    <p>
+                        Spacious suite designed for comfort.
+                    </p>
+
+                    <span>
+                        From ₹22,000 / Night
+                    </span>
+
+                    <br>
+
+                    <button
+                        class="view-room"
+                        onclick="showRoom(
+                            'Luxury Suite',
+                            '₹22,000 / Night',
+                            'Spacious luxury suite with a separate living area, elegant furniture and premium services.'
+                        )">
+
+                        VIEW DETAILS
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ROYAL SUITE -->
+            <div class="room-card">
+
+                <div class="room-image room3"></div>
+
+                <div class="room-info">
+
+                    <h3>
+                        Royal Suite
+                    </h3>
+
+                    <p>
+                        An unforgettable royal experience.
+                    </p>
+
+                    <span>
+                        From ₹35,000 / Night
+                    </span>
+
+                    <br>
+
+                    <button
+                        class="view-room"
+                        onclick="showRoom(
+                            'Royal Suite',
+                            '₹35,000 / Night',
+                            'Our finest suite with royal interiors, spacious living areas and an unforgettable luxury experience.'
+                        )">
+
+                        VIEW DETAILS
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+<!-- GALLERY -->
+
+<section class="gallery">
+
+    <p class="small-title">
+        OUR GALLERY
+    </p>
+
+    <h2>
+        Discover The Grand Palace
+    </h2>
+
+    <div class="gallery-container">
+
+        <div class="gallery-item gallery1">
+            <div class="gallery-overlay">
+                <span>Luxury Lobby</span>
+            </div>
+        </div>
+
+        <div class="gallery-item gallery2">
+            <div class="gallery-overlay">
+                <span>Luxury Room</span>
+            </div>
+        </div>
+
+        <div class="gallery-item gallery3">
+            <div class="gallery-overlay">
+                <span>Fine Dining</span>
+            </div>
+        </div>
+
+        <div class="gallery-item gallery4">
+            <div class="gallery-overlay">
+                <span>Swimming Pool</span>
+            </div>
+        </div>
+
+        <div class="gallery-item gallery5">
+            <div class="gallery-overlay">
+                <span>Hotel Exterior</span>
+            </div>
+        </div>
+
+        <div class="gallery-item gallery6">
+            <div class="gallery-overlay">
+                <span>Luxury Experience</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+    <!-- DINING -->
+    <section id="dining" class="dining">
+
+        <div class="dining-content">
+
+            <p class="small-title">
+                FINE DINING
+            </p>
+
+            <h2>
+                Taste The Extraordinary
+            </h2>
+
+            <p>
+                Indulge in exquisite cuisine prepared by our
+                world-class chefs using the finest ingredients.
+            </p>
+
+            <button class="hero-btn">
+                EXPLORE DINING
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SPA -->
+    <section id="spa" class="spa">
+
+        <p class="small-title">
+            WELLNESS
+        </p>
+
+        <h2>
+            Relax. Refresh. Reconnect.
+        </h2>
+
+        <p>
+            Escape into a world of calm and rejuvenation
+            with our luxurious spa experiences.
+        </p>
+
+    </section>
+    
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+    <div class="contact-heading">
+
+        <p class="small-title">
+            GET IN TOUCH
+        </p>
+
+        <h2>
+            Contact The Grand Palace
+        </h2>
+
+        <p>
+            We are here to make your stay unforgettable.
+        </p>
+
+    </div>
+
+
+    <div class="contact-container">
+
+
+        <!-- CONTACT INFORMATION -->
+
+        <div class="contact-info">
+
+            <h3>
+                Visit Us
+            </h3>
+
+            <p>
+                📍 123 Palace Road,<br>
+                Mumbai, Maharashtra, India
+            </p>
+
+            <p>
+                📞 +91 98765 43210
+            </p>
+
+            <p>
+                ✉️ reservations@grandpalace.com
+            </p>
+
+            <div class="contact-map">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Mumbai%20India&output=embed"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <div class="contact-form">
+
+            <h3>
+                Send Us A Message
+            </h3>
+
+            <form id="contactForm">
+
+                <input
+                    type="text"
+                    id="contactName"
+                    placeholder="Your Name"
+                    required>
+
+                <input
+                    type="email"
+                    id="contactEmail"
+                    placeholder="Your Email"
+                    required>
+
+                <input
+                    type="text"
+                    id="contactSubject"
+                    placeholder="Subject"
+                    required>
+
+                <textarea
+                    id="contactMessage"
+                    placeholder="Your Message"
+                    rows="6"
+                    required></textarea>
+
+                <button
+                    type="submit"
+                    class="contact-btn">
+
+                    SEND MESSAGE
+
+                </button>
+
+            </form>
+
+            <div id="contactResponse"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+
+        <h2>
+            THE GRAND PALACE
+        </h2>
+
+        <p>
+            Luxury • Hospitality • Experiences
+        </p>
+
+        <p>
+            © 2026 The Grand Palace. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ROOM DETAILS POPUP -->
+    <div id="roomModal" class="room-modal">
+    <div class="modal-content">
+
+        <button class="close-modal" onclick="closeRoom()">×</button>
+
+        <p class="small-title">ROOM DETAILS</p>
+
+        <h2 id="modalRoomName">Deluxe Room</h2>
+
+        <p id="modalRoomDescription">
+            Elegant luxury room.
+        </p>
+
+        <h3 id="modalRoomPrice">₹12,000 / Night</h3>
+
+        <button class="hero-btn" onclick="bookSelectedRoom()">
+            BOOK THIS ROOM
+        </button>
+
+        <button class="close-btn" onclick="closeRoom()">
+            CLOSE
+        </button>
+
+    </div>
+</div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+

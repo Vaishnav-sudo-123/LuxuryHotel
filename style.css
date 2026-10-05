@@ -1,0 +1,1080 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f8f5ef;
+    color: #222;
+}
+
+
+/* ================= NAVBAR ================= */
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.navbar {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    background: rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+.book-btn {
+    padding: 13px 24px;
+    background: #d4af37;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background: #b8941f;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 100vh;
+    min-height: 650px;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+        url("https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=2000&q=90");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.welcome {
+    font-size: 15px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 90px);
+    letter-spacing: 8px;
+    margin-bottom: 25px;
+}
+
+.hero-content > p:not(.welcome) {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.hero-btn {
+    padding: 15px 32px;
+    border: 1px solid #d4af37;
+    background: #d4af37;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: transparent;
+    color: #d4af37;
+}
+
+
+/* ================= INTRO ================= */
+
+.intro {
+    text-align: center;
+    padding: 110px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.small-title {
+    color: #b8941f;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.intro h2,
+.rooms h2,
+.spa h2 {
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.intro p:last-child,
+.spa p:last-child {
+    font-family: Arial, sans-serif;
+    color: #666;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+
+/* ================= ROOMS ================= */
+
+.rooms {
+    padding: 100px 6%;
+    text-align: center;
+    background: white;
+}
+
+.room-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.room-card {
+    background: #f8f5ef;
+    text-align: left;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.room-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.room-image {
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+}
+
+.room1 {
+    background-image:
+        url("https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=85");
+}
+
+.room2 {
+    background-image:
+        url("https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=85");
+}
+
+.room3 {
+    background-image:
+        url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=85");
+}
+
+.room-info {
+    padding: 25px;
+}
+
+.room-info h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.room-info p {
+    font-family: Arial, sans-serif;
+    color: #666;
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+.room-info span {
+    color: #b8941f;
+    font-weight: bold;
+}
+
+
+/* ================= DINING ================= */
+
+.dining {
+    min-height: 600px;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.55)),
+        url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=2000&q=90");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+}
+
+.dining-content {
+    width: 600px;
+    margin-left: 8%;
+    padding: 30px;
+}
+
+.dining h2 {
+    font-size: 50px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.dining-content p:not(.small-title) {
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+/* ================= SPA ================= */
+
+.spa {
+    padding: 120px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #181818;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+footer h2 {
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-family: Arial, sans-serif;
+    color: #aaa;
+    margin: 10px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .room-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        letter-spacing: 4px;
+    }
+
+    .dining-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .intro h2,
+    .rooms h2,
+    .spa h2 {
+        font-size: 34px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .book-btn {
+        padding: 10px 15px;
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-content > p:not(.welcome) {
+        font-size: 15px;
+    }
+
+    .room-image {
+        height: 230px;
+    }
+}
+
+/* ================= BOOKING ================= */
+
+.booking {
+    padding: 80px 6%;
+    background: #eee9df;
+}
+
+.booking-box {
+    max-width: 1100px;
+    margin: auto;
+    background: white;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.booking-box h2 {
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    padding: 14px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #b8941f;
+}
+
+.booking-btn {
+    margin-top: 30px;
+    padding: 15px 35px;
+    background: #d4af37;
+    color: white;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.booking-btn:hover {
+    background: #b8941f;
+}
+
+#bookingMessage {
+    margin-top: 25px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-box {
+        padding: 30px 20px;
+    }
+}
+/* ================= ROOM BUTTON ================= */
+
+.view-room {
+    margin-top: 18px;
+    padding: 11px 20px;
+    background: transparent;
+    border: 1px solid #b8941f;
+    color: #b8941f;
+    cursor: pointer;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.view-room:hover {
+    background: #d4af37;
+    color: white;
+}
+
+
+/* ================= ROOM MODAL ================= */
+
+.room-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+    padding: 20px;
+}
+
+.modal-content {
+    position: relative;
+    background: #f8f5ef;
+    width: 600px;
+    max-width: 100%;
+    padding: 55px 45px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.modal-content p:not(.small-title) {
+    font-family: Arial, sans-serif;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.modal-content h3 {
+    color: #b8941f;
+    margin-bottom: 30px;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+
+    border: none;
+    background: none;
+
+    font-size: 35px;
+    cursor: pointer;
+    color: #555;
+}
+
+.close-modal:hover {
+    color: #b8941f;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery {
+    padding: 110px 6%;
+    text-align: center;
+    background: #f8f5ef;
+}
+
+.gallery h2 {
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery1 {
+    background-image:
+        url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=85");
+}
+
+.gallery2 {
+    background-image:
+        url("https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=85");
+}
+
+.gallery3 {
+    background-image:
+        url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85");
+}
+
+.gallery4 {
+    background-image:
+        url("https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1000&q=85");
+}
+
+.gallery5 {
+    background-image:
+        url("https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1000&q=85");
+}
+
+.gallery6 {
+    background-image:
+        url("https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1000&q=85");
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.gallery-overlay span {
+    color: white;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+    transition: 0.4s;
+}
+
+
+@media (max-width: 800px) {
+
+    .gallery-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-item {
+        height: 250px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 280px;
+    }
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+    padding: 110px 6%;
+    background: white;
+}
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact-heading h2 {
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.contact-heading p:last-child {
+    font-family: Arial, sans-serif;
+    color: #777;
+}
+
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+
+.contact-info h3,
+.contact-form h3 {
+    font-size: 27px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.contact-info p {
+    font-family: Arial, sans-serif;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+
+.contact-map {
+    margin-top: 30px;
+    height: 250px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* CONTACT FORM */
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+
+    border: 1px solid #ccc;
+    outline: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #b8941f;
+}
+
+.contact-btn {
+    padding: 15px;
+
+    background: #d4af37;
+    color: white;
+
+    border: none;
+    cursor: pointer;
+
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.contact-btn:hover {
+    background: #b8941f;
+}
+
+#contactResponse {
+    margin-top: 20px;
+
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+
+@media (max-width: 800px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+}
+
+/* ================= NAVIGATION EFFECTS ================= */
+
+.book-btn,
+.hero-btn,
+.booking-btn,
+.contact-btn {
+    transition: all 0.3s ease;
+}
+
+.book-btn:hover,
+.booking-btn:hover,
+.contact-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ROOM CARD ANIMATION */
+
+.room-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+/* GALLERY ANIMATION */
+
+.gallery-item {
+    transition: transform 0.4s ease;
+}
+
+
+/* BUTTON CLICK EFFECT */
+
+button:active {
+    transform: scale(0.97);
+}
+/* MOBILE MENU */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 0;
+        gap: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        color: white;
+        font-size: 14px;
+    }
+
+    .book-btn {
+        margin-top: 5px;
+    }
+}
+/* SCROLL ANIMATIONS */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.close-btn {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: 1px solid #c9a227;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.close-btn:hover {
+    background: #c9a227;
+    color: black;
+}
+
+.modal-content h3 {
+    margin: 20px 0;
+}
+/* THEME TOGGLE */
+
+.theme-btn {
+    background: transparent;
+    border: 1px solid #c9a227;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: #c9a227;
+    transform: rotate(20deg);
+}
+
+/* LIGHT THEME */
+
+body.light-theme {
+    background: #f5f5f5;
+    color: #222;
+}
+
+body.light-theme .navbar {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+body.light-theme .nav-links a {
+    color: #222;
+}
+
+body.light-theme .theme-btn {
+    color: #222;
+}
+
+body.light-theme .intro,
+body.light-theme .contact {
+    background: #f5f5f5;
+    color: #222;
+}
+
+body.light-theme .booking {
+    background: #eeeeee;
+}
+
+body.light-theme .booking-box {
+    background: white;
+    color: #222;
+}
+
+body.light-theme .room-info {
+    background: white;
+    color: #222;
+}
+
+body.light-theme .modal-content {
+    background: white;
+    color: #222;
+}
+/* =========================
+   FINAL LUXURY POLISH
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Navbar polish */
+.navbar {
+    backdrop-filter: blur(8px);
+    transition: all 0.4s ease;
+}
+
+.nav-links a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #c9a227;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Buttons */
+.hero-btn,
+.booking-btn,
+.contact-btn,
+.book-btn,
+.view-room {
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover,
+.booking-btn:hover,
+.contact-btn:hover,
+.book-btn:hover,
+.view-room:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Room cards */
+.room-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Room images */
+.room-image {
+    transition: transform 0.6s ease;
+}
+
+.room-card:hover .room-image {
+    transform: scale(1.05);
+}
+
+/* Gallery */
+.gallery-item {
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Section headings */
+section h2 {
+    letter-spacing: 1px;
+}
+
+/* Forms */
+input,
+select,
+textarea {
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #c9a227;
+    box-shadow: 0 0 8px rgba(201, 162, 39, 0.25);
+}
+
+/* Modal */
+.modal-content {
+    animation: modalOpen 0.35s ease;
+}
+
+@keyframes modalOpen {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid rgba(201, 162, 39, 0.4);
+}
+
+
+
+
+
+
+
+
